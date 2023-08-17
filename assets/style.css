@@ -41,10 +41,11 @@ body {
 }
 
 .banner {
-    background: url("https://i1.wp.com/www.blog.gladysreligiosos.com.br/wp-content/uploads/2019/04/Banner-Blog.jpeg?fit=1200%2C360&ssl=1");
+    background: url("https://images.tcdn.com.br/img/img_prod/667437/1554898017_imagens-2.jpg");
     background-repeat: no-repeat;
-    background-size: contain;
-    min-height: 40rem;
+    background-size: cover;
+    min-height: 50vh;
+    min-width: 100vw;
 }
 section {
     display: flex;
@@ -57,6 +58,35 @@ section {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap:7rem;
-    height: 30vh;
+    gap:3rem;
+    margin: 3rem;
+    width: 80%;
+    overflow: hidden;
+}
+
+.livros {
+    width: 300px;
+    transition:  transform .3s;
+}
+.livros:hover{
+    transform: scale(1.05);
+}
+
+.grupos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    gap: 2rem;
+    margin: 2rem auto;
+}
+.grupos img {
+    width: 28vw;
+    border-radius: 8px;
+    transition: transform .3s;
+}
+
+.grupos img:hover{
+    transform: scale(1.05);
+
 }
