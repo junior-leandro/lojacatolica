@@ -4,7 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./assets/style.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/galery.css">
     <title>Loja Católica</title>
 </head>
 
@@ -20,7 +21,7 @@
                     <li><a href="#livros" class="link-menu scroll">LIVROS</a></li>
                     <li><a href="#tercos" class="link-menu scroll">TERÇOS</a></li>
                     <li><a href="#biblias" class="link-menu scroll">BIBLIAS</a></li>
-                    <li><a href="#presentes" class="link-menu scroll">PRESENTES</a></li>
+                    <li><a href="#mais-vendidos" class="link-menu scroll">PRESENTES</a></li>
                     <li><a href="#imagens" class="link-menu scroll">IMAGENS</a></li>
                     <li><a href="#endereco" class="link-menu scroll">ENDEREÇO</a></li>
                 </ul>
@@ -43,7 +44,7 @@
 
         <!-- MAIS VENDIDOS -->
         <section class="mais-vendidos">
-            <h2 style="font-size:30px;">MAIS VENDIDOS</h2>
+            <h2 style="font-size:30px;" id="mais-vendidos">MAIS VENDIDOS</h2>
             <div class="section-flex">
                 <div class="area-1"><img
                         src="https://s3.amazonaws.com/avemaria.com.br/catalog/product/cache/1/image/565x565/9df78eab33525d08d6e5fb8d27136e95/b/_/b_blia-eis-o-cordeiro-de-deus-vermelha.png"
@@ -149,6 +150,29 @@
             </div>
         </section>
 
+        <section class="container">
+            <button class="arrow-left control" aria-label="Previous Image">◀</button>
+            <button class="arrow-right control" aria-label="Next Image">▶</button>
+
+            <div class="galery-wrapper">
+                <div class="galery">
+                    <img src="https://p2.trrsf.com/image/fget/cf/774/0/images.terra.com/2019/09/25/istock-623709132.jpg" class="item current-item" alt="">
+                    <img src="https://cdn.dooca.store/974/products/frente-dsc1111-comcoroa-loja.jpg?v=1679850986" class="item " alt="">
+                    <img src="https://static3.tcdn.com.br/img/img_prod/280297/imagem_santo_antonio_durata_100_cm_6155_1_d0281fdc3b1bf247c5661c3613603ad9_20220621174415.jpg" class="item " alt="">
+                    <img src="https://cdn.dooca.store/974/products/frente-dsc1111-comcoroa-loja.jpg?v=1679850986" class="item " alt="">
+                    <img src="https://p2.trrsf.com/image/fget/cf/774/0/images.terra.com/2019/09/25/istock-623709132.jpg" class="item " alt="">
+                    <img src="https://cdn.dooca.store/974/products/frente-dsc1111-comcoroa-loja.jpg?v=1679850986" class="item " alt="">
+                    <img src="https://p2.trrsf.com/image/fget/cf/774/0/images.terra.com/2019/09/25/istock-623709132.jpg" class="item current-item" alt="">
+                    <img src="https://cdn.dooca.store/974/products/frente-dsc1111-comcoroa-loja.jpg?v=1679850986" class="item " alt="">
+                    <img src="https://static3.tcdn.com.br/img/img_prod/280297/imagem_santo_antonio_durata_100_cm_6155_1_d0281fdc3b1bf247c5661c3613603ad9_20220621174415.jpg" class="item " alt="">
+                    <img src="https://cdn.dooca.store/974/products/frente-dsc1111-comcoroa-loja.jpg?v=1679850986" class="item " alt="">
+                    <img src="https://p2.trrsf.com/image/fget/cf/774/0/images.terra.com/2019/09/25/istock-623709132.jpg" class="item " alt="">
+                    <img src="https://cdn.dooca.store/974/products/frente-dsc1111-comcoroa-loja.jpg?v=1679850986" class="item " alt="">
+                </div>
+
+            </div>
+
+        </section>
     </main>
 
     <footer>
@@ -186,8 +210,8 @@
 
         </div>
         <div class="copy">
-            Todos os direitos reservados à <strong>Loja Catolica</strong> 2023 | Desenvolvido por <strong><a
-                    href="https://junior.dev.br" target="_blank">junior.dev.br</a></strong>
+            Todos os direitos reservados à&nbsp; <strong> Loja Catolica </strong> &nbsp;2023 | Desenvolvido por <strong><a
+                    href="https://junior.dev.br" target="_blank">&nbsp;junior.dev.br</a></strong>
         </div>
 
     </footer>
@@ -203,6 +227,7 @@
             return false;
         });
     </script>
+    <script src="./assets/js/galery.js"></script>
 </body>
 
 </html>
