@@ -1,18 +1,23 @@
 const controls = document.querySelectorAll('.control');
 
-let currentItem = 0;
+let currentItem = 2;
 const items = document.querySelectorAll(".item");
 const maxItems =  items.length;
 
+const leftButton = document.querySelector(".arrow-left");
+const rightButton = document.querySelector(".arrow-right");
+
 
 controls.forEach(control => {
+    
+
     control.addEventListener('click', () =>{
         const isLeft = control.classList.contains("arrow-left");
         
         if (isLeft){
-            currentItem -=1;
+            currentItem -=4;
         } else {
-            currentItem +=1;
+            currentItem +=4;
         }
         if (currentItem >= maxItems){
             currentItem = 0;
@@ -23,10 +28,11 @@ controls.forEach(control => {
         items.forEach((item) => item.classList.remove("current-item"));
 
         items[currentItem].scrollIntoView({
-            inline:"center",
+            inline:"start",
             behavior: "smooth",
             block: "nearest"
         });
         console.log (currentItem, maxItems)
+        
     });
 });
