@@ -1,38 +1,57 @@
-const controls = document.querySelectorAll('.control');
+const controls = document.querySelectorAll('.imagem-control');
 
-let currentItem = 2;
-const items = document.querySelectorAll(".item");
-const maxItems =  items.length;
+let currentImagem = 0;
+const imagens = document.querySelectorAll(".imagem");
+const maxImagens =  imagens.length;
 
-const leftButton = document.querySelector(".arrow-left");
-const rightButton = document.querySelector(".arrow-right");
+const leftButton = document.querySelector(".imagem-arrow-left");
+const rightButton = document.querySelector(".imagem-arrow-right");
 
 
-controls.forEach(control => {
-    
+controls.forEach(control => {    
 
     control.addEventListener('click', () =>{
-        const isLeft = control.classList.contains("arrow-left");
+
+        const isLeft = control.classList.contains("imagem-arrow-left");
         
         if (isLeft){
-            currentItem -=4;
+            currentImagem = currentImagem - 4;
         } else {
-            currentItem +=4;
+            currentImagem = currentImagem + 4;
         }
-        if (currentItem >= maxItems){
-            currentItem = 0;
+        if (currentImagem >= maxImagens){
+            currentImagem = 0;
         }
-        if (currentItem < 0) {
-            currentItem = maxItems - 1;
-        }
-        items.forEach((item) => item.classList.remove("current-item"));
+        if (currentImagem < 0) {
+            currentImagem = maxImagens - 1;
+        }     
+       
+        /* CHECAGEM DOS BOTÕES */
 
-        items[currentItem].scrollIntoView({
+        if (currentImagem == 0){
+            leftButton.classList.add('hidden')
+        } else {
+            leftButton.classList.remove('hidden')
+        }
+        if (currentImagem == 8){
+            rightButton.classList.add('hidden')
+        } else {
+            rightButton.classList.remove('hidden')
+        }
+
+        imagens.forEach((imagem) => imagem.classList.remove("current-imagem"));
+
+        imagens[currentImagem].scrollIntoView({
             inline:"start",
             behavior: "smooth",
             block: "nearest"
         });
-        console.log (currentItem, maxItems)
+        console.log (currentImagem, maxImagens)
         
     });
+
+    if (currentImagem == 0){
+        leftButton.classList.add('hidden')
+    }
+
 });
