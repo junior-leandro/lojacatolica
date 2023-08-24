@@ -73,14 +73,7 @@ section {
     overflow: hidden;
 }
 
-.livros {
-    width: 320px;
-    transition: transform .3s;
-}
 
-.livros:hover {
-    transform: scale(1.05);
-}
 
 .grupos {
     display: flex;

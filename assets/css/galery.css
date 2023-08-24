@@ -51,7 +51,9 @@
     opacity: 1;
 }
 
-.biblia, .imagem {
+.biblia, 
+.imagem, 
+.livros {
     width: 300px;
     height: 450px;
     border: 1px solid #ececec;
@@ -64,7 +66,7 @@
     padding-bottom: 1rem;
     background-color: #FFFFFF;
 }
-.biblia img, .imagem img {
+.biblia img, .imagem img, .livros img {
     width: 290px;
     max-height: 400px;
     overflow: hidden;
@@ -72,7 +74,7 @@
     flex-shrink: 1;
 }
 
-.biblia img:hover, .imagem img:hover {
+.biblia img:hover, .imagem img:hover, .livros img:hover {
     transform: scale(0.95);
 }
 

@@ -1,40 +1,11 @@
 const controls = document.querySelectorAll('.imagem-control');
-
 let currentImagem = 0;
 const imagens = document.querySelectorAll(".imagem");
 const maxImagens = imagens.length;
-
 const leftButton = document.querySelector(".imagem-arrow-left");
 const rightButton = document.querySelector(".imagem-arrow-right");
 
-/*
 
-function imagens(, type){
-
-    let currentItem = 0;
-    const leftButton = document.querySelector(".arrow-left");
-    const rightButton = document.querySelector(".arrow-right");
-
-    const isLeft = e.target.classList.contains("arrow-left");
-    items = type;
-
-    if (isLeft) {
-        currentItem = currentItem - 4;
-    } else {
-        currentItem = currentItem + 4;
-    }
-
-    items.forEach((item) => item.classList.remove("current-item"));
-
-    items[currentItem].scrollIntoView({
-        behavior: "smooth",
-        inline: "center"
-    });
-
-    items[currentItem].classList.add("current-item");
-
-};
-*/
 controls.forEach(control => {
 
     control.addEventListener('click', () => {
@@ -46,6 +17,7 @@ controls.forEach(control => {
         } else {
             currentImagem = currentImagem + 4;
         }
+
 
         /* CHECAGEM DOS BOTÕES */
 
@@ -67,7 +39,7 @@ controls.forEach(control => {
             behavior: "smooth",
             block: "nearest"
         });
-        console.log(currentImagem, maxImagens)
+        
 
     });
 
