@@ -1,40 +1,40 @@
-const controls = document.querySelectorAll('.imagem-control');
-let currentImagem = 0;
-const imagens = document.querySelectorAll(".imagem");
-const maxImagens = imagens.length;
-const leftButton = document.querySelector(".imagem-arrow-left");
-const rightButton = document.querySelector(".imagem-arrow-right");
+const vendidosControl = document.querySelectorAll('.vendidos-control');
+  let vendidosCurrentItem = 0;
+const vendidosItems = document.querySelectorAll(".vendidos");
+const vendidosMaxItems = vendidosItems.length;
+const vendidosLeftButton = document.querySelector(".vendidos-arrow-left");
+const vendidosRightButton = document.querySelector(".vendidos-arrow-right");
 
 
-controls.forEach(control => {
+vendidosControl.forEach(vendidosControl => {
 
-    control.addEventListener('click', () => {
+    vendidosControl.addEventListener('click', () => {
 
-        const isLeft = control.classList.contains("imagem-arrow-left");
+        const vendidosIsLeft = vendidosControl.classList.contains("vendidos-arrow-left");
 
-        if (isLeft) {
-            currentImagem = currentImagem - 4;
+        if (vendidosIsLeft) {
+            vendidosCurrentItem = vendidosCurrentItem - 4;
         } else {
-            currentImagem = currentImagem + 4;
+            vendidosCurrentItem = vendidosCurrentItem + 4;
         }
 
 
         /* CHECAGEM DOS BOTÕES */
 
-        if (currentImagem == 0) {
-            leftButton.classList.add('hidden')
+        if (vendidosCurrentItem == 0) {
+            vendidosLeftButton.classList.add('hidden');
         } else {
-            leftButton.classList.remove('hidden')
+            vendidosLeftButton.classList.remove('hidden');
         }
-        if (currentImagem == 8) {
-            rightButton.classList.add('hidden')
+        if (vendidosCurrentItem == 8) {
+            vendidosRightButton.classList.add('hidden')
         } else {
-            rightButton.classList.remove('hidden')
+            vendidosRightButton.classList.remove('hidden')
         }
 
-        imagens.forEach((imagem) => imagem.classList.remove("current-imagem"));
+        vendidosItems.forEach((vendidosItem) => vendidosItem.classList.remove("current-vendido"));
 
-        imagens[currentImagem].scrollIntoView({
+        vendidosItems[vendidosCurrentItem].scrollIntoView({
             inline: "start",
             behavior: "smooth",
             block: "nearest"

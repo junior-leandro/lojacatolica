@@ -40,7 +40,6 @@ livrosControl.forEach(livrosControl => {
             block: "nearest"
         });
         
-        console.log (livrosCurrentItem, livrosMaxItems)
 
     });
 
