@@ -6,9 +6,16 @@
     box-sizing: border-box;
 }
 
+
+
+html {
+    width: 100vw;
+}
+
 body {
     font-family: 'Montserrat', sans-serif;
     background-color: #f5f5f5;
+    width: 100%;
 }
 
 .header-header {
@@ -53,7 +60,7 @@ li {
     background-repeat: no-repeat;
     background-size: cover;
     min-height: 60vh;
-    min-width: 100%;
+    width: 100%;
 }
 
 section {
@@ -63,12 +70,16 @@ section {
     align-items: center;
 }
 
+h2 {
+    font-size: 30px;
+}
+
 .section-flex {
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 3rem;
-    margin: 3rem;
+    margin: 3rem auto;
     width: 75%;
     overflow: hidden;
 }
@@ -97,11 +108,6 @@ section {
 
 
 
-
-
-
-
-
 .services {
     text-align: center;
     margin: 3rem auto;
@@ -112,20 +118,23 @@ section {
     display: flex;
     justify-content: space-around;
     margin: 2rem auto;
+    width: 100%;
 }
 
 .logo-rodape {
     width: 100px;
 }
-.rodape1, 
+
+.rodape1,
 .rodape2,
-.rodape3, 
+.rodape3,
 .rodape4 {
     width: 18%;
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
+
 .rodape1 {
     align-items: center;
     gap: 1rem;
@@ -146,4 +155,88 @@ section {
 .copy a {
     text-decoration: none;
     color: #ffffff;
+}
+
+@media (max-width: 1024px) {
+
+    .header-header {
+        font-size: 12px;
+    }
+
+    .nav-menu {
+        font-size: 10px;
+    }
+
+    .banner {
+        background-size: cover;
+        min-height: 30vh;
+    }
+
+    .grupos img {
+        width: 40vw;
+    }
+    iframe {
+        height: 40vh;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .header-header,
+    nav {
+        display: none;
+    }
+
+    .logo-header {
+        width: 7rem;
+    }
+    
+    .banner {
+        background: url("https://pmcc4w.ca/wp-content/uploads/2020/03/passion-play-2020Featureimg.jpg");
+        background-size: cover;
+    }
+
+    .grupos img {
+        width: 36vw;
+    }
+}
+
+
+@media (max-width: 425px) {
+    .cards {
+        display: none;
+    }
+    .grupos {
+        flex-direction: column;
+    }
+    .grupos img {
+        width: 70vw;
+    }
+
+    .rodape {
+        flex-direction: column;
+        justify-content: center;
+        align-items: start;
+        padding-left: 3rem ;
+    }
+    .rodape1,
+    .rodape2,
+    .rodape3, 
+    .rodape4 {
+        width: 90%;
+        margin-bottom: 3rem;
+    }
+
+    .copy {
+        font-size: 10px;
+    }
+    .por-dentro {
+        font-size: 20px;
+        text-align: center;
+    }
+}
+@media (max-width: 425px) {
+    .copy{
+        font-size: 8px;
+    }
 }

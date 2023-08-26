@@ -1,20 +1,27 @@
 .container {
     position: relative;
     padding: 15px;
-    max-width: 1266px;
-    margin: 0 auto;
+    max-width: 1200px;
+    margin: 4rem auto;
 }
+
 .galery-wrapper {
     width: 100%;
     overflow-x: auto;
 }
+
+
+/* Hide scrollbar for Chrome, Safari and Opera */
 .galery-wrapper::-webkit-scrollbar {
     display: none;
 }
+  
+  /* Hide scrollbar for IE, Edge and Firefox */
 .gallery-wrapper {
-    -ms-overflow-style: none;
-    scrollbar-width: none;
-  }
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+
 
 .galery {
     display: flex;
@@ -42,44 +49,47 @@
     transition: all 600ms ease-in-out;
     background-color: transparent;
 }
+
 .arrow-right {
     left: auto;
     right: 0;
 }
+
 .arrow-left:hover,
 .arrow-right:hover {
     opacity: 1;
 }
 
-.biblia, 
-.imagem, 
+.biblia,
+.imagem,
 .livros,
 .vendidos {
-    width: 300px;
+    width: 280px;
     height: 450px;
     border: 1px solid #ececec;
-    box-shadow: 0px 10px 24px -7px rgba(0,0,0,0.1);
+    box-shadow: 0px 10px 24px -7px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
     display: flex;
     flex-direction: column;
-    justify-content:end;
+    justify-content: end;
     align-items: center;
     padding-bottom: 1rem;
     background-color: #FFFFFF;
 }
-.biblia img, 
-.imagem img, 
+
+.biblia img,
+.imagem img,
 .livros img,
 .vendidos img {
-    width: 290px;
+    width: 278px;
     max-height: 400px;
     overflow: hidden;
     transition: transform .3s;
     flex-shrink: 1;
 }
 
-.biblia img:hover, 
-.imagem img:hover, 
+.biblia img:hover,
+.imagem img:hover,
 .livros img:hover,
 .vendidos img:hover {
     transform: scale(0.95);
@@ -87,4 +97,40 @@
 
 .hidden {
     display: none;
+}
+
+@media (max-width: 1024px) {
+    .container {
+        width: 90vw;
+        padding: 0;
+    }
+
+    .arrow-left,
+    .arrow-right {
+        display: none;
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        width: 80vw;
+        padding: 0;
+    }
+
+    .arrow-left,
+    .arrow-right {
+        display: none;
+    }
+}
+
+@media (max-width: 425px) {
+    .container{
+        width: 75vw;
+    }
+}
+
+@media (max-width: 425px) {
+    .container{
+        width: 84vw;
+    }
 }
